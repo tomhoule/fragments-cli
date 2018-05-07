@@ -1,0 +1,14 @@
+[package]
+name = "fragments-cli"
+version = "0.1.0"
+authors = ["Tom Houlé <tom@tomhoule.com>"]
+
+[dependencies]
+structopt = "0.2.8"
+rocksdb = "0.10.0"
+prost = "0.3.2"
+prost-derive = "0.3.2"
+bytes = "0.4.7"
+
+[build-dependencies]
+prost-build = "0.3.2"
