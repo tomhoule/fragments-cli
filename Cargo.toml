@@ -1,15 +1,23 @@
 [package]
 authors = ["Tom Houlé <tom@tomhoule.com>"]
-name = "fragments-cli"
+name = "fragmentary"
 version = "0.1.0"
-
 [build-dependencies]
 prost-build = "0.3.2"
 
 [dependencies]
+actix = "*"
+actix-web = "*"
 bytes = "0.4.7"
+dotenv = "*"
+env_logger = "*"
 failure = "*"
+futures = "0.1"
+log = "*"
 prost = "0.3.2"
 prost-derive = "0.3.2"
-rocksdb = "0.10.0"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
 structopt = "0.2.8"
+uuid = "*"

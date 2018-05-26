@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package fragmentary.text;
+
+import "common.proto";
+
+message TextCommand {
+  oneof command { CreateText create_text = 1; }
+}
+
+message TextEvent {
+  string stream_id = 1;
+  uint32 seq_no = 2;
+  fragmentary.common.Timestamp timestamp = 3;
+
+  oneof payload { TextCreated text_created = 4; }
+}
+
+message Text {
+  string id = 1;
+  string title = 2;
+  string authors = 3;
+}
+
+message CreateText { Text text = 1; }
+
+message TextCreated {
+  Text text = 1;
+  string user_id = 2;
+}
